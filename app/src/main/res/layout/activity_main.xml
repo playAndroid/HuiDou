@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main"
+    android:background="@drawable/chat_bg_default"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@+id/ll_msg"
-        android:layout_height="match_parent" />
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp" />
 
     <LinearLayout
         android:id="@+id/ll_msg"
@@ -21,15 +24,18 @@
         <EditText
             android:id="@+id/et_content"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:background="@drawable/login_edit_normal"
-            android:text="123" />
+            android:text="" />
 
         <Button
             android:id="@+id/btn_send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
             android:background="@drawable/btn_send"
             android:text="发送" />
     </LinearLayout>
